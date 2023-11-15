@@ -1,0 +1,10 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+data = rnd.normal(loc=6, scale=2, size=100)
+hist_data = plt.hist(data)
+plt.xlabel('bins')
+plt.ylabel('number of data points')
+print('number of data points in each bin:', hist_data[0])
+print('limits of the bins:', hist_data[1])

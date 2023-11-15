@@ -1,0 +1,13 @@
+from sympy import *
+
+def f(x):
+    return x - 4 
+
+def g(x):
+    return x**2 - 4 
+
+x = Symbol('x')
+sol1 = solve(f(x) > 0, x)
+print(sol1) 
+sol2 = solve(g(x) > 0, x)
+print(sol2)

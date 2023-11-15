@@ -1,0 +1,6 @@
+import numpy as np
+
+x = np.arange(-10, 11)
+y = np.random.randn(len(x))     # generating random data for y
+z = np.polyfit(x, y, 3)         # computing coeffiecients of polynomial of order 3
+print(z)

@@ -1,0 +1,8 @@
+from sympy import *
+
+x = Symbol('x')
+
+ts_sin = series(sin(x), x).removeO()
+ts_cos = series(cos(x), x).removeO()
+print("Taylor series for sin(x):", ts_sin)
+print("Taylor series for cos(x):", ts_cos)

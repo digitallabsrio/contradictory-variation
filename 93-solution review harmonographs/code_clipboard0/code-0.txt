@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# defining function with default paramters value
+def pendulum(t, A=1, f=100, p=0, d=0.05):
+  return (A * np.sin (2 * np.pi * f * t + p) * np.exp(-1 * d * t))
+
+# creating array for time
+t = np.linspace(0, 2 * np.pi, 1000)
+x_t = pendulum(t, 1, 2, 0, 0.5)
+
+# plotting and setting labels
+plt.figure(figsize=(12, 9), dpi=200)
+plt.plot(t, x_t)
+
+# setting labels
+plt.title('Damped Pendulum')
+plt.xlabel('t')
+plt.ylabel('x(t)')
+
+# saving figure
+plt.savefig('output/harmonograph1.png')

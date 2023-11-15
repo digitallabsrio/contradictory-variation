@@ -1,0 +1,9 @@
+from sympy import *
+
+x = Rational(4, 5)
+y = Rational(4, 6)
+
+print("Addition:", (x + y).evalf(20))
+print("Subtraction:", (x - y).evalf(10))
+print("Multiplication:", (x * y).evalf(7))
+print("Division:", (x / y).evalf(3))

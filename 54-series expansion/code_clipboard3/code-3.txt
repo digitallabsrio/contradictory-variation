@@ -1,0 +1,6 @@
+from sympy import *
+
+x = Symbol('x')
+
+s8 = sin(x).series(x, 0, 8).removeO()
+print("Taylor series for sin(x):", s8.subs({x: pi/10}))

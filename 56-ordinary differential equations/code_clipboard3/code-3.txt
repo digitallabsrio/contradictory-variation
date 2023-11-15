@@ -1,0 +1,12 @@
+from sympy import *
+
+t = symbols('t')
+x = Function('x')(t)
+W = 2 * pi 
+zeta = 0.5
+
+dxdt= x.diff(t)  # taking single derivative 
+dx2dt2 = x.diff(t, t)  # taking double derivative, alternatively dx2dt2 = dxdt.diff(t)
+diff_eq = Eq((dx2dt2) + (2 * zeta * W * dxdt) + (W**2 * x), 0)
+z = dsolve(diff_eq)
+print(z.rhs.subs({'C1': 1, 'C2': 1, t: 5}))

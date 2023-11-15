@@ -1,0 +1,11 @@
+x = 5
+y = 10
+z = 10
+print("y > x =",y > x) # 10 is greater than 5
+print("x > y =", x > y) # 5 is not greater than 10
+
+print("y is z =", y is z) # Both have the same value
+print("y is not x =", y is not x) # Both have different values
+
+print (3 + 10 == 5 + 5) # Both are not equal
+print (3 <= 2) # 3 is not less than or equal to 2

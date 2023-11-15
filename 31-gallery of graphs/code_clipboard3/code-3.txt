@@ -1,0 +1,10 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+data1 = np.random.randint(low=1, high=100, size=50)
+data2 = np.random.randint(low=1, high=100, size=50)
+data = [data1, data2]
+fig, axes = plt.subplots(figsize=(12, 8))
+
+axes.boxplot(data)
+axes.set_title("Box Plot")

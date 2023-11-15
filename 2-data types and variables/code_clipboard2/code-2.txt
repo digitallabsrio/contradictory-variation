@@ -1,0 +1,6 @@
+print(complex(10, 20))
+
+complex_1 = complex(0, 2)
+complex_2 = 2 + 3j
+print(complex_1)
+print(complex_2)

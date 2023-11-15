@@ -1,0 +1,9 @@
+num = 72
+
+if num % 2 == 0 and num % 3 == 0 and num % 4 == 0 :
+    # Only works when num is a multiple of 2, 3, and 4
+    print ("The number is a multiple of 2, 3, and 4")
+    
+    # This nested if only works when num is a multiple of 2, 3, 4 and 6
+    if num % 6 == 0:
+        print ("The number is also a multiple of 6")

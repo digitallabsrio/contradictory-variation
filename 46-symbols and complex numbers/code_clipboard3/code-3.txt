@@ -1,0 +1,7 @@
+from sympy import *
+x = 2+5*I
+
+print("Type of y is", type(x))
+
+y = complex(x) # converting x to Python complex type
+print("Type of y is", type(y))

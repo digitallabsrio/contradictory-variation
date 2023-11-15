@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 2 * np.pi , 100)
+y1 = np.sin(x)
+y2 = np.cos(x)
+
+fig, ax = plt.subplots(2, 2, figsize=(9, 5)) # creates a 2x2 grid
+
+ax[0, 0].plot(x, y1) # plots on [0, 0] block on the grid
+ax[0, 0].set_title("sin(x)") 
+
+ax[0, 1].plot(x, y2) # plots on the [0, 1] block on the grid 
+ax[0, 1].set_title("cos(x)") 
+
+ax[1, 0].plot(x, y1 + y2) # plots on [1, 0] block on the grid
+ax[1, 0].set_title("sin(x) + cos(x)") 
+
+ax[1, 1].plot(x, y1 - y2) # plots on the [1, 1] block on the grid 
+ax[1, 1].set_title("sin(x) - cos(x)") 
+
+fig.tight_layout() 

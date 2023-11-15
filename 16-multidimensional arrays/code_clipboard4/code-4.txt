@@ -1,0 +1,12 @@
+import numpy as np
+
+v = np.array([1, 5, 9])
+M = np.array([[4, 2, 3, 2],
+              [2, 4, 3, 1],
+              [0, 4, 1, 3]])
+
+print("size of v is ", v.size)
+print("shape of v is ", v.shape)
+
+print("size of M is ", M.size)
+print("shape of M is ", M.shape)

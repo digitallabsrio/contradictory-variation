@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-5, 5, 100)
+fig, axes = plt.subplots(3, 1, figsize=(12, 8))
+axes[0].plot(x, 2 * x + 2, x, 2 * x + 4)
+axes[0].set_title("default axes")
+
+axes[1].plot(x, 2 * x + 2, x, 2 * x + 4)
+axes[1].axis('tight') 
+axes[1].set_title("tight axes")
+
+axes[2].plot(x, 2 * x + 2, x, 2 * x + 4)
+axes[2].set_ylim([-10, 10])     # setting x
+axes[2].set_xlim([-2, 2])
+axes[2].set_title("custom axes");
+
+fig.tight_layout() 

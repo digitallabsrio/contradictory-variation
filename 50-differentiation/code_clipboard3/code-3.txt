@@ -1,0 +1,10 @@
+from sympy import *
+
+def f(x, y):
+    return (y**4)*(x**3) + (x**4)*(y**3)
+
+x = Symbol('x')
+y = Symbol('y')
+z = f(x, y)
+
+print("d^3z/dy^2dx = ", diff(z, y, 2, x, 1)) # or could use diff(z, y, y, x)

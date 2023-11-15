@@ -1,0 +1,13 @@
+import numpy as np
+
+M = np.array([[(n + m * 5) for n in range(4)] for m in range(5)])
+print("M")
+print(M) 
+
+N = np.array([[1], [2], [3], [4], [5]])
+print("N")
+print(N)
+
+print("-----")
+print("N * M")
+print(N * M)

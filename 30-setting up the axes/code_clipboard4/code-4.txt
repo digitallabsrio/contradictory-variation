@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, np.pi/100, 100)    # an array of time
+print(t)
+W = 2 * np.pi * 50             # angular frequency
+theta = np.pi/2    # phase difference
+
+I = 5 * np.sin(W * t)   # values of current
+V = 24 * np.sin(W * t + theta)   # values of voltage
+
+fig, axesI = plt.subplots(figsize=(12, 8))
+
+axesI.plot(t, I, 'r')
+axesI.set_xlabel("time(s)")
+axesI.set_ylabel("Current(A)", color='red')
+
+axesV = axesI.twinx()  # instantiate a second axes that shares the same x-axis
+
+axesV.plot(t, V, 'b')
+axesV.set_ylabel("Voltage(V)", color='blue') 

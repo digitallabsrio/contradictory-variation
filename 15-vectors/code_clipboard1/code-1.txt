@@ -1,0 +1,6 @@
+import numpy as np
+
+v1 = np.ones(5)
+v0 = np.zeros(5)
+print(v1)
+print(v0)

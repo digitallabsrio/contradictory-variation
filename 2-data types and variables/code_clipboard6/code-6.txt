@@ -1,0 +1,2 @@
+str1 = "Educative" # string has 9 characters
+print (len(str1))

@@ -1,0 +1,23 @@
+from sympy import *
+
+def f(x):     # just a mathematical function
+  return atan(x)
+
+def g(x):       # just a mathematical function
+  return exp(x)
+
+x = Symbol('x')
+
+def ts_integral(f, x, n=4, lim1=None, lim2=None):
+  ts = f(x).series(x, 0, n).removeO()
+  integral = integrate(ts, (x, lim1, lim2))
+  return ts, integral.evalf(3) 
+
+output_1 = ts_integral(f, x, 10, 0, pi/4)
+output_2 = ts_integral(g, x)
+
+print("Taylor Series of f(x):", output_1[0])
+print("Integral of f(x):", output_1[1])
+print("-----")
+print("Taylor Series of g(x):", output_2[0])
+print("Integral of g(x):", output_2[1])

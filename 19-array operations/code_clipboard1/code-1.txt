@@ -1,0 +1,20 @@
+import numpy as np
+
+M = np.array([[(n + m * 20) for n in range(5)] for m in range(5)])
+print(M) 
+
+print("-----")
+print("Using scalar addition")
+print(M + 2) # adding 2 to each element in the matrix
+
+print("-----")
+print("Using scalar subtraction")
+print(M - 2) # subtracting 2 from each element in the matrix
+
+print("-----")
+print("Using scalar multiplication")
+print(M * 2) # multiplying each element by 2 in the matrix
+
+print("-----")
+print("Using scalar division")
+print(M / 2) # dividing each element by 2 in the matrix

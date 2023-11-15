@@ -1,0 +1,10 @@
+def minimum (first, second):     # first and second are parameters
+  if (first < second):   
+    print (first)
+  else:
+    print (second)
+
+num1 = 10
+num2 = 20
+
+minimum (num1, num2)    # num1 and num2 are arguments

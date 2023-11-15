@@ -1,0 +1,5 @@
+from sympy import *
+
+x = Symbol('x')
+a = (68*x**2 + 34*x - 27)/(3*(4*x**3 + 4*x**2 - 5*x - 3)) 
+print(apart(a))

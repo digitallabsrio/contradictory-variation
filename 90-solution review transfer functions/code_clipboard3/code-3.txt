@@ -1,0 +1,16 @@
+from sympy import *
+s = Symbol('s')
+
+in1 = 1 + s
+in2 = s
+G1 = 1 / s
+G2 = 1 / (s + 1)
+G3 = 1 / (s**2 + 2)
+G4 = 4
+
+in11 = ((in1 + in2) * in2) * G1 * G2
+in22 = in2 * G3 * G4
+
+output = together(in11 - in22) 
+x = output.subs({s: 1})
+print(x)

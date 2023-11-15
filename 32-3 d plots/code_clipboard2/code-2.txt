@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+def spiral(a, b, t):
+    x = a * np.cos(t)
+    y = a * np.sin(t)
+    z = b * t
+    return x, y, z
+
+t = np.linspace(0, 20, 100)
+x, y, z = spiral(4, 2, t)
+
+fig = plt.figure()
+
+ax1 = fig.add_subplot(121, projection='3d')
+ax1.plot(x, y, z)
+ax1.view_init(45, 45)
+
+ax2 = fig.add_subplot(122, projection='3d')
+ax2.plot(x, y, z, color='r')
+ax1.view_init(30, 90)

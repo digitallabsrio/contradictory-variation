@@ -1,0 +1,5 @@
+from sympy import *
+
+x = Symbol('x')
+a = (x**4 + 14*x**3 + 71*x**2 + 154*x + 120)
+print(factor(a))

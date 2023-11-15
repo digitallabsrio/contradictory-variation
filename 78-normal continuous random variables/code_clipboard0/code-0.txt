@@ -1,0 +1,7 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+data = rnd.normal(loc=4, scale=2, size=100)  # Array with 100 values
+print('mean of data: ', np.mean(data))
+print('standard deviation of data: ', np.std(data))

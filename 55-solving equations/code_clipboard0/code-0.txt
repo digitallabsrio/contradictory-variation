@@ -1,0 +1,8 @@
+from sympy import *
+
+def f(x):
+    return 2*x + 3
+
+x = Symbol('x')
+sol = solve(f(x), x)
+print(sol) 

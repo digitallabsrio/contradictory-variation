@@ -1,0 +1,8 @@
+from sympy import *
+
+def f(x):   # just a mathematical function to assist you
+  return atan(x)
+
+def ts_integral():
+    # write your code here
+  pass

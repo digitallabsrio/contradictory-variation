@@ -1,0 +1,7 @@
+phone_book = {"Batman": 428426, 
+              "Superman": 28918398, 
+              "Flash": 8198318}
+            
+print (phone_book)
+phone_book["Aquaman"] = 4209211 
+print (phone_book)

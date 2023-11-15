@@ -1,0 +1,4 @@
+from scipy.stats import norm
+
+norm_theory = norm.ppf([0.025, 0.5, 0.975], loc=10, scale=2)
+print (norm_theory)

@@ -1,0 +1,22 @@
+from sympy import *
+import numpy as np
+import matplotlib.pyplot as plt
+
+s = Symbol('s')
+tf = 3 * (s * (s**2 + 1) + 4 * (s + 1) * (s + 2))/((s + 1) * (s + 2) * (s**2 + 1))
+
+n_solve = solve(numer(tf))
+d_solve = solve(denom(tf))
+
+zeros = np.array([complex(item) for item in n_solve])
+poles = np.array([complex(item) for item in d_solve])
+
+plt.axhline(y=0, color='k')
+plt.axvline(x=0, color='k')
+plt.title('Pole-Zero Plot')
+plt.xlabel('real')
+plt.ylabel('imaginary')
+plt.scatter(zeros.real, zeros.imag, marker='o', label='zero')
+plt.scatter(poles.real, poles.imag, marker='x', label='pole')
+plt.legend()
+plt.savefig('output/plot.png')

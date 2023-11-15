@@ -1,0 +1,16 @@
+from sympy import *
+
+x, y, z = symbols('x y z')
+a, b, c = symbols('a b c')
+# defining eqautions 
+eq1 = x + y - z - a
+eq2 = x - 2*y + 3*z + b
+eq3 = 2*x +3*y + z - c 
+
+sol = solve([eq1, eq2, eq3], [x, y, z])
+
+print(sol)
+
+print("x =", sol[x])
+print("y =", sol[y])
+print("z =", sol[z])

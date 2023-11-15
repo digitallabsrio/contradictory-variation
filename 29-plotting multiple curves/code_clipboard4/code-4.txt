@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 2 *np.pi , 100)
+y1 = np.sin(x)
+
+fig, ax = plt.subplots()
+ax.plot(x, y1)
+ax.set_xlabel('x') 
+ax.set_ylabel('y') 
+ax.set_title('y = sin(x)')

@@ -1,0 +1,11 @@
+import numpy as np
+
+a = np.arange(6)
+print("a =", a)
+b = np.copy(a)       # a is copied in b
+print("b =", b)
+b[3] = 666      # changing in b will not change a
+
+print("After replacing value in b")
+print("a =", a) 
+print("b =", b)

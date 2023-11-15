@@ -1,0 +1,11 @@
+x = 24
+y = 12
+z = 3
+
+print("x + y =", x + y )    # addition
+print("x - y =", x - y )    # subtraction
+print("y * z =", y * z )    # multiplication
+print("x / y =", x / y )    # division
+print("y**2 =", y**2 )      # exponential  
+print("x % 5 =", x % 5 )    # modulo
+print("x // 5 =", x // 5 )     # floor division

@@ -1,0 +1,4 @@
+import numpy as np
+
+v = np.array([1, 5, 9])
+print(v[1])

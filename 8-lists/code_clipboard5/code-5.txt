@@ -1,0 +1,7 @@
+M = [[], [], [], [], []]
+
+for m in range(5):
+  for n in range(5): 
+    M[m].append(n + m * 20)
+   
+print(M)

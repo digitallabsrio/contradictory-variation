@@ -1,0 +1,35 @@
+from scipy import *
+from scipy import fftpack
+import matplotlib.pyplot as plt
+
+sig_length = 0.5  # signal length seconds
+sample_rate = 500  # sampling rate in Hz
+
+dt = 1 / sample_rate   # time between samples in [s]
+df = 1 / sig_length   # frequency between frequency points in [Hz]
+
+# array for time
+t = arange(0, sig_length, dt)
+
+# only considering the positive frequencies
+freq = arange(0, sample_rate/2, df)     
+n = len(freq)   # length of frequency array 
+
+# generating signal
+y = 0.5 * sin(2 * pi * 40 * t) + sin(2 * pi * 60 * t + pi/2)
+
+f = fft(y)      # computing fourier transform
+
+# plotting signal
+fig, ax = plt.subplots(2, 1) 
+ax[0].plot(t, y) 
+ax[0].set_title('time domain') 
+ax[0].set_xlabel('time(s)') 
+
+# plotting fourier transform
+ax[1].plot(freq, abs(f[0:n]))
+ax[1].set_title('FFT') 
+ax[1].set_xlabel('frequency(Hz)') 
+ax[1].set_ylabel('abs(DFT)') 
+
+fig.tight_layout()

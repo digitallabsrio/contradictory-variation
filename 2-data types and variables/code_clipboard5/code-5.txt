@@ -1,0 +1,7 @@
+print ("Edpresso") # String with double quotation marks
+
+edu = 'Educative' # String with single quotation marks
+print (edu) 
+
+empty = ""  # Empty string
+print(empty)

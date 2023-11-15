@@ -1,0 +1,7 @@
+from sympy import *
+
+def f(x):
+    return sin(x) / x
+
+x = Symbol('x')
+print(limit(f(x), x, 0))

@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 5, 100)
+fig, ax = plt.subplots()
+ax.plot(x, np.exp(-x), label = r"$\lambda = e^{-x}$") 
+ax.plot(x, np.exp(-2 * x), label = r"$\lambda = e^{-2x} $") 
+ax.legend(loc = 0) 
+ax.set_xlabel(r'$x$') 
+ax.set_ylabel(r'$\lambda$') 
+ax.set_title(r'$LaTeX$');
+
+fig.savefig('output/fig.png')

@@ -1,0 +1,8 @@
+import numpy as np
+
+x = np.arange(0, 101, 5) 
+np.savetxt('fives.txt', x)     # saving x in fives.npy 
+print(x)
+
+y = np.loadtxt('fives.txt')
+print(y)

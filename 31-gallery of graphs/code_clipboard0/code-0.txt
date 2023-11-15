@@ -1,0 +1,9 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+genre = ['Drama', 'Comedy', 'Thriller', 'Sci-Fi', 'History']
+amount = [100, 25, 30, 70, 75]
+pieColor = ['MediumBlue', 'SpringGreen', 'BlueViolet'];
+
+plt.axis('equal')
+plt.pie(amount, labels=genre, autopct='%1.1f%%', colors=pieColor)

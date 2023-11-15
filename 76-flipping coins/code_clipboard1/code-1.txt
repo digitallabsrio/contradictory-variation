@@ -1,0 +1,10 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+flips = rnd.randint(0, 1+1, 100)
+headcount = len(flips[flips == 0])  #length of array with zeros
+tailcount = len(flips[flips == 1])  #length of array with ones
+
+print('number of heads:', headcount)
+print('number of tails:', tailcount)

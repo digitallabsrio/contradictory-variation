@@ -1,0 +1,4 @@
+import numpy as np
+
+x = np.ones((3, 4)) # An array with 3 rows and 4 columns
+print(x)

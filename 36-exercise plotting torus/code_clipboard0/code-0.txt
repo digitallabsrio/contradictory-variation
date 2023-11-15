@@ -1,0 +1,26 @@
+# importing modules
+import matplotlib.pyplot as plt
+
+# defining function
+def torus(r, R, theta, phi):
+  # write your function here
+  pass
+
+
+# initializing values of arrays
+  # write your code here
+
+
+# initializing figure
+  # write your code here
+
+  
+# plotting commands for first plot
+  # write your code here
+
+
+# plotting commands for second plot
+  # write your code here
+
+# plot saving command
+plt.savefig('output/torus.png')

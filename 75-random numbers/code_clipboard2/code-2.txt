@@ -1,0 +1,6 @@
+import numpy as np
+import numpy.random as rnd
+
+arr = np.arange(1, 11) 
+pick = rnd.choice(arr, 3, replace = True)
+print(pick)

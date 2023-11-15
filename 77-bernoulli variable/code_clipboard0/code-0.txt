@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+N = 1000
+tails = np.sum(rnd.randint(0, 1+1, (5, 1000)), axis=0)
+counttails = np.zeros(6, dtype='int')
+
+for i in range(6):
+    counttails[i] = np.count_nonzero(tails == i)
+
+prob = counttails / N
+cum_prob = np.cumsum(prob)
+print('probababilties:', prob)
+print('cumulative probabilities:', cum_prob)
+plt.bar(range(0, 6), cum_prob)
+plt.xticks(range(0, 6))
+plt.xlabel('number of tails in two flips')
+plt.ylabel('cumulative probability');

@@ -1,0 +1,11 @@
+import numpy as np
+
+a = np.arange(6)
+print("a =", a)
+b = a           # a is passed by reference and b is referring to same data as a
+print("b =", b)
+b[3] = 666      # changing in b will also change the value in a
+
+print("After replacing value in b")
+print("a =", a) # value is replaced in a as well
+print("b =", b)

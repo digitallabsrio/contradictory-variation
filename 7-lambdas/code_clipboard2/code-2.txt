@@ -1,0 +1,16 @@
+def calculator (operation, n1, n2):
+  return operation(n1, n2) # Using the 'operation' argument as a function
+
+# 10 and 20 are the arguments.
+# The lambda multiplies them.
+result = calculator(lambda n1, n2: n1 * n2, 10, 20) 
+
+print (result)
+
+# 10 and 20 are the arguments.
+# The lambda adds them.
+print (calculator(lambda n1, n2: n1 + n2, 10, 20))
+
+# 10 and 3 are the arguments.
+# The lambda computes 10^3
+print (calculator(lambda n1, n2: n1 ** n2, 10, 3))

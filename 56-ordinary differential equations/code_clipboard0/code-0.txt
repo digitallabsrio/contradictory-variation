@@ -1,0 +1,9 @@
+from sympy import *
+
+x = symbols('x')
+y = Function('y')(x)
+
+dydx = y.diff(x)  # taking single derivative 
+diff_eq = Eq(dydx + 5 * y * x**2, 0)
+z = dsolve(diff_eq)
+print(z)

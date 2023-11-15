@@ -1,0 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+from scipy.stats import norm
+
+data = rnd.normal(loc=10, scale=2, size=100)
+lower, median, upper = np.percentile(data, [2.5, 50, 97.5])
+lower_Q, upper_Q = np.percentile(data, [25, 75])
+print('2.5 percentile:', lower)
+print('50 percentile:', median)
+print('97.5 percentile:', upper)
+print('95 percentile:', upper - lower)
+print('IQR percentile:', upper_Q - lower_Q)

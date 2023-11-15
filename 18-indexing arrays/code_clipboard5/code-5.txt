@@ -1,0 +1,4 @@
+import numpy as np
+
+v = np.array([1, 3, 5, 7, 9, 11])
+print(v[2:4]) # 4th element will not be included

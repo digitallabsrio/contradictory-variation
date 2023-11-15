@@ -1,0 +1,8 @@
+from sympy import *
+
+x = Symbol('x')
+
+ts_sin = series(sin(x), x, 0.1, 5) # taylor series around pi/4 with max power 5
+ts_cos = series(cos(x), x, 0.5, 4) #  taylor series around pi/3 with max power 4
+print("Taylor series for sin(x):", ts_sin)
+print("Taylor series for cos(x):", ts_cos)

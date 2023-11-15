@@ -1,0 +1,6 @@
+import numpy as np
+
+a = np.arange(20)
+print(a)
+a[(a > 5) & (a < 10)] = 666
+print(a)

@@ -1,0 +1,9 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+y = np.random.randint(low=1, high=100, size=10)
+x = np.arange(10)
+fig, axes = plt.subplots(figsize=(12, 8))
+axes.bar(x, y)
+axes.set_xticks(np.arange(10))
+axes.set_title("Bar Chart")

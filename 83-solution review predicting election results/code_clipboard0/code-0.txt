@@ -1,0 +1,15 @@
+import numpy as np
+import numpy.random as rnd
+
+rnd.seed(2)
+people = np.zeros(1000000, dtype='int')  # arthur is 0
+people[490001:] = 1  # ben is 1
+poll = rnd.choice(people, 1000)
+
+polled_for_arthur = len(poll[poll == 0])
+
+print('polled for A:', polled_for_arthur)
+if polled_for_arthur > 500: 
+    print('Octavius will predict the wrong winner')
+else:
+    print('Octavius will predict the correct winner')

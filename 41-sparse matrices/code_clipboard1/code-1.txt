@@ -1,0 +1,9 @@
+import scipy.sparse as sp
+import numpy as np
+
+M = np.array([[2, 3, 0, 0], [1, 2, 3, 0], [0, 1, 2, 3], [0, 0, 1, 2]])
+print(M)
+
+sparse_row = sp.csr_matrix(M) 
+print("Compressed Sparse Row")
+print(sparse_row)

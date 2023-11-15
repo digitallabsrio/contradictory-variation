@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# setting up the equation
+  # write your code here
+
+# solving the equation
+  # write your code here
+
+# plotting the wave
+  # write your code here
+
+# plotting the points
+  # write your code here
+
+# saving figure
+plt.savefig('output/wave.png')

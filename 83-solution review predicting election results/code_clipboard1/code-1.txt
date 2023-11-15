@@ -1,0 +1,21 @@
+import numpy as np
+import numpy.random as rnd
+
+rnd.seed(2)
+
+arthur_wins = 0
+ben_wins = 0
+
+for i in range(1000):
+  people = np.zeros(1000000, dtype='int')  # Arthur is 0
+  people[490001:] = 1  # Ben is 1
+  poll = rnd.choice(people, 1000)
+  polled_for_arthur = len(poll[poll ==  0])
+  
+  if polled_for_arthur > 500: 
+    arthur_wins += 1
+  else:
+    ben_wins += 1
+    
+print('1000 polls of 1000 people')
+print('Probability that Octavius predicts correct winner:', (ben_wins / 1000))

@@ -1,0 +1,14 @@
+import numpy as np
+
+v = np.linspace(-5, 5, 5)
+print(v)
+
+if (v > 0).any():
+  print("At leat one element is positive.")
+else:
+   print("No element is positive.") 
+
+if (v > 0).all():
+  print("All elements are postive.")
+else:
+   print("Not all elements are positive.") 

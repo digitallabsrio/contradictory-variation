@@ -1,0 +1,10 @@
+import numpy as np
+
+M = np.array([[4, 2, 3, 2],
+              [2, 4, 3, 1],
+              [0, 4, 1, 3]])
+
+print("Bytes per element of M is", M.itemsize)
+print("Number of bytes of M are", M.nbytes)
+print("Dimensions of M are", M.ndim)
+print("Data type of elements in M is", M.dtype)

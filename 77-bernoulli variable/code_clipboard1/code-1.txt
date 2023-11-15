@@ -1,0 +1,15 @@
+import numpy as np
+import numpy.random as rnd
+from scipy.special import comb
+
+print('Theoretical probabilities:')
+for k in range(6):
+    y = comb(5, k) * 0.5**k * 0.5**(5 - k)
+    print(k, ' tails ', y)
+    
+for N in (1000, 10000, 100000):
+    tails = np.sum(rnd.randint(0, 1+1, (5, N)), axis=0)
+    counttails = np.zeros(6)
+    for i in range(6):
+        counttails[i] = np.count_nonzero(tails==i)
+    print('Probability with', N, 'trials: ', counttails / float(N))

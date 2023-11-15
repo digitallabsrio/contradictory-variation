@@ -1,0 +1,8 @@
+int_list = [22, 4, 64, 8, 100]
+count_greater = 0
+
+for num in int_list: # Iterator goes traverses to the last index of the list
+  if num > 10:
+    count_greater += 1
+
+print (count_greater)

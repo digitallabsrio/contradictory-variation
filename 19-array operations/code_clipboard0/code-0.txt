@@ -1,0 +1,20 @@
+import numpy as np
+
+v = np.arange(1, 11)
+print(v) 
+
+print("-----")
+print("Using scalar addition")
+print(v + 2) # adding 2 to each element in the vector
+
+print("-----")
+print("Using scalar subtraction")
+print(v - 2) # subtracting 2 from each element in the vector
+
+print("-----")
+print("Using scalar multiplication")
+print(v * 2) # multiplying each element by 2 in the vector
+
+print("-----")
+print("Using scalar division")
+print(v / 2) # dividing each element by 2 in the vector

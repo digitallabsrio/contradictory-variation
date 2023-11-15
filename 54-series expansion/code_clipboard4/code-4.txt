@@ -1,0 +1,6 @@
+from sympy import *
+
+x = Symbol('x')
+
+fps_exp = fps(exp(x), x, 0).truncate(6).removeO() # formal power series of exp around 0
+print(fps_exp.subs({x: 2}))

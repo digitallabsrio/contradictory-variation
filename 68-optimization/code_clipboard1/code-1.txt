@@ -1,0 +1,25 @@
+from scipy import *
+from scipy import optimize
+import matplotlib.pyplot as plt
+
+def f(x):
+    return sin(x) -  (2 * exp(-(x - 0.4)**2))
+
+x = arange(-10, 10, 0.1)
+y = f(x)
+
+point1 = -2.0 
+point2 = 6.0 
+
+minima = optimize.fminbound(f, point1, point2)
+print(minima)
+
+fig, ax = plt.subplots(figsize=(12, 8)) 
+ax.plot(x, y, label = '$\sin(x)-2e^{-(x-0.4)^2}$')  # plotting curve
+
+ax.plot(minima, f(minima), 's', label='minima', marker='v', color='r')    # plotting min1 
+
+ax.set_xlabel('x')
+ax.grid()
+ax.set_ylabel('y')
+ax.legend(loc='best')

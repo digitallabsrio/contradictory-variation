@@ -1,0 +1,4 @@
+num = 2780 # Assigning an integer to a variable
+print (num)
+num = -1625 # Assigning a new integer
+print (num)

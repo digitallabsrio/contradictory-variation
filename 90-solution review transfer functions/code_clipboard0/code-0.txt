@@ -1,0 +1,14 @@
+from sympy import *
+
+s = Symbol('s')
+
+G1 = 1 / s
+G2 = 1 / (s + 1)
+G3 = s / (s + 2)
+G4 = 4
+G5 = 1 / (s**2 + 1)
+G6 = 3 * s
+
+tf = together(G1 * ((G2 * G3) + (G4 * G5)) * G6)
+
+print(tf)

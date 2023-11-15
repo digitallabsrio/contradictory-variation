@@ -1,0 +1,6 @@
+# this code will not work
+def func():
+    name = "Educative"
+
+func()
+print (name) # Accessing 'name' outside the function 

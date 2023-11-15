@@ -1,0 +1,7 @@
+import numpy as np
+
+v = np.array([0, 3, 4])
+M = np.array([[2, 3, 5], [4, 98, 2], [11, 12, -13]])
+
+print("Norm of v is", np.linalg.norm(v))
+print("Norm of M is", np.linalg.norm(M))

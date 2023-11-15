@@ -1,0 +1,8 @@
+from sympy import *
+
+def f(x):
+    return (1 + 2*x) * exp(-x) 
+
+x = Symbol('x')
+print(integrate(f(x), x))       # definite integral
+print(integrate(f(x), (x, 0, oo))) # limits are from 0 to inifinite

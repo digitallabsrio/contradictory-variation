@@ -1,0 +1,12 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-10, 10, 100)
+y = x**2 + (2 * x) + 6
+
+fig, axes = plt.subplots(figsize=(12, 8))
+axes.spines['top'].set_color('r')   # setting color of top spine
+axes.spines['bottom'].set_color('b')    # setting color of bottom spine
+axes.spines['bottom'].set_linewidth(2)  # setting linewidth of bottom spine
+axes.spines['left'].set_color('g')     # setting color of left spine
+axes.plot(x, y)

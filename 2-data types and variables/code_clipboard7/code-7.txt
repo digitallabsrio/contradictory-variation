@@ -1,0 +1,12 @@
+superman = "Clark Kent"
+
+first = superman[0] # Accessing the first character
+print (first) 
+
+space = superman[5] # Accessing the empty space in the string
+print (space) 
+
+last = superman[len(superman) - 1]
+print (last)
+
+# err = superman[len(superman)] This will produce an error since the index is out of bounds

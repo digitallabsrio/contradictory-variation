@@ -1,0 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, 2 * np.pi, 100)    
+I = 5 * np.sin(t)   
+
+fig, axes = plt.subplots(figsize=(12, 8))
+
+axes.plot(t, I, 'r')
+axes.set_xlabel("time(s)")
+axes.set_ylabel("Current(A)")
+
+axes.set_xticks(np.linspace(0, 2 * np.pi, 5)) # specifying ticks
+axes.set_xticklabels(['0', r'$0.5\pi$', r'$\pi$', r'$1.5\pi$', r'$2\pi$' ]) # custom ticks

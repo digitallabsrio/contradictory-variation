@@ -1,0 +1,13 @@
+phone_book = {"Batman": 428426, 
+              "Superman": 28918398, 
+              "Flash": 8198318}
+            
+if "Batman" in phone_book:
+  print ("Gotham is saved.")
+else:
+  print ("Gotham is in danger.")
+
+if "Aquaman" in phone_book:
+  print ("Atlantis is saved.")
+else:
+  print ("Atlantis is in danger.")   

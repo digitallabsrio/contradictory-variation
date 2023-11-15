@@ -1,0 +1,12 @@
+from sympy import * 
+
+x = Symbol('x')
+y = Function('y')(x)
+
+dydx = y.diff(x)
+d2ydx2 = y.diff(x, x)       # alternatively d2ydx2 = dydx.diff(x)
+
+diff_eq = Eq(d2ydx2 + (2 * dydx) + y - sin(x))
+z = dsolve(diff_eq)
+
+print(z.rhs)

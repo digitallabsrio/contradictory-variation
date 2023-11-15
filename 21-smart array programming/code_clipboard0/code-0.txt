@@ -1,0 +1,6 @@
+import numpy as np
+
+a = np.arange(10)
+print('the total array:', a)
+print("array of booleans:", a < 5)
+print('values less than 5:', a[a < 5])

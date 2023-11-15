@@ -1,0 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = np.random.randn(100000)
+fig, axes = plt.subplots(figsize=(12, 8))
+plt.hist(n)
+axes.set_title("Histogram")
+axes.set_xlim((min(n), max(n)))

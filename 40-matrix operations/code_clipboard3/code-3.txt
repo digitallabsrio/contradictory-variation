@@ -1,0 +1,6 @@
+import numpy as np
+
+A = np.array([[2, 3, 5], [4, 98, 2], [11, 12, -13]])
+print(A)
+print("After Transpose")
+print(np.transpose(A))

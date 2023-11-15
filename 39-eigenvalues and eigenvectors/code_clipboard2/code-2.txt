@@ -1,0 +1,9 @@
+import numpy as np
+
+a = np.array([[-1, 1-2j, 0],[1+2j, 0, 0-1j],[0, 1j, 1]], dtype=complex) # Hermitian matrix
+evals, evecs = np.linalg.eigh(a)
+
+print(a)
+print("Eigenvalues", evals)
+print("-----")
+print("Eigenvectors", evecs)

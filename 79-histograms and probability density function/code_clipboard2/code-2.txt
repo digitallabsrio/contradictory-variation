@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+from scipy.stats import norm
+
+mu = 6
+sig = 2
+n = 100
+
+data = rnd.normal(loc=mu, scale=sig, size=n)
+hist_data = plt.hist(data, bins=12, range=(0, 12), density=True)
+print('number of data points in each bin:', hist_data[0])
+print('limits of the bins:', hist_data[1])
+plt.xlabel('bins')
+plt.ylabel('number of data points');
+
+# plotting pdf
+x = np.linspace(0, 12, 100)
+y = norm.pdf(x, loc=mu, scale=sig) # mu=6, sig=2
+plt.plot(x, y, 'r')
+plt.xlabel('value')
+plt.ylabel('probability');

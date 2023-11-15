@@ -1,0 +1,2 @@
+def check_sum(num_list, num):
+  pass # write your code here

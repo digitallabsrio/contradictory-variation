@@ -1,0 +1,5 @@
+print (2.02975745) # A positive float
+print (-5.7289201) # A negative float
+
+flt_pt = 0.758391739
+print (flt_pt)

@@ -1,0 +1,8 @@
+science = ["Physics", "Chemistry", 30]
+print (science)
+
+# Indexing is done using square brackets
+print (science[0])
+
+# Length
+print (len(science))

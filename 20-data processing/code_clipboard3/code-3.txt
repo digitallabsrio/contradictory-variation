@@ -1,0 +1,5 @@
+import numpy as np
+
+arr = np.array([1+3j, 2+5j, 3+1j, 8-2j])
+print("Real part of arr =", arr.real)
+print("Imaginary part of arr = ", arr.imag)

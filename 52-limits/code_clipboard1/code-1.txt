@@ -1,0 +1,7 @@
+from sympy import *
+
+def f(x):
+    return ((2 * exp((1 - cos(x)) / sin(x)) - 1)**(sinh(x) / atan(x)**2))
+
+x = Symbol('x')
+print(limit(f(x), x, 0))

@@ -1,0 +1,26 @@
+import numpy as np
+
+M = np.array([[(n + m * 5) for n in range(3)] for m in range(3)])
+print("M")
+print(M) 
+
+N = np.array([[(n * 5) for n in range(3)] for m in range(3)])
+print("N")
+print(N) 
+
+print("-----")
+print("M * M")
+print(M * M) # multiplication
+
+print("-----")
+print("M + M") # addition
+print(M + M)
+
+print("-----")
+print("M - N") # subtraction
+print(M - N)
+
+print("-----")
+print("(M + 1) / (N + 1)")
+print((M + 1) / (N + 2)) # division 
+                         # to avoid division by zero, we have added scalar 1

@@ -1,0 +1,14 @@
+from sympy import *
+import numpy as np
+
+s = Symbol('s')
+tf = 3 * (s * (s**2 + 1) + 4 * (s + 1) * (s + 2)) / ((s + 1) * (s + 2) * (s**2 + 1))
+
+n_solve = solve(numer(tf))
+d_solve = solve(denom(tf))
+
+zeros = np.array([complex(item) for item in n_solve])
+poles = np.array([complex(item) for item in d_solve])
+
+print(zeros)
+print(poles)

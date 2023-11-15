@@ -1,0 +1,7 @@
+import numpy as np
+
+system = np.array([[1, 2],[0, 2]])
+
+evals, evecs = np.linalg.eig(system)
+print("Eigenvalues:", evals)
+print("Eigenvectors:", evecs)

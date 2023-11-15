@@ -1,0 +1,5 @@
+z  = complex(12, 5)
+print('z =', z)
+
+print("Real part of z is", z.real)
+print("Imaginary part of z is", z.imag)

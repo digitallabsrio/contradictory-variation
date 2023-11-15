@@ -1,0 +1,7 @@
+num = 12
+
+if (num == 10): # The condition is not true
+  print ("The number is equal to 10") # The code is not executed
+
+else:   # This will be automatically executed 
+  print ("The number is not equal to 10") # The code is executed

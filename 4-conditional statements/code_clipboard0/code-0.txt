@@ -1,0 +1,7 @@
+num = 10
+
+if num == 10: # The condition is true
+  print ("The number is equal to 10") # The code is executed
+
+if num > 10: # The condtion is false
+  print ("The number is greater than 10") # The code is not executed

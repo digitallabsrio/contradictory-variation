@@ -1,0 +1,11 @@
+import numpy as np
+
+x = np.linspace(0, 2 * np.pi, 20)
+y = np.sin(x)
+
+arr1 = y[(y > 0.7) | (y < -0.5)]
+arr2 = y[(y > -0.5) & (y < 0.7)]
+
+print(arr1)
+print('-----')
+print(arr2)

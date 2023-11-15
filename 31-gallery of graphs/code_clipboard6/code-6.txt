@@ -1,0 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+y = np.random.randint(low=1, high=100, size=100)    # creates a random array of 100 intergers 
+                                                    # ranging from 1 - 100
+fig, axes = plt.subplots(figsize=(12, 8))
+axes.scatter(x, y, marker='.')

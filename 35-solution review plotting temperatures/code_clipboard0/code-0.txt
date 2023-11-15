@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+land_temp = np.array([6, 7, 8, 10, 14, 16, 18, 17, 15, 12, 11, 9])
+sea_temp = np.array([4, 5, 10, 11, 12, 16, 19, 18, 14, 10, 8, 5])
+
+fig, ax = plt.subplots(2, 1)
+ticks = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+
+x = np.linspace(0, 13, 12)
+# commands for plotting the first graph
+ax[0].plot(x, land_temp, 'r', label = 'air temp')
+ax[0].plot(x, sea_temp, 'b', label = 'sea temp')
+ax[0].set_xticks(x) 
+ax[0].set_xticklabels(ticks)
+ax[0].legend(loc = 'best')
+ax[0].set_ylabel('temp (Celsius)')
+ax[0].set_xlabel('months')
+
+# commands for plotting the second graph
+ax[1].plot(x, land_temp - sea_temp, 'b-o')
+ax[1].set_xticks(x) 
+ax[1].set_xticklabels(ticks)
+ax[1].set_ylabel('land - sea temp (Celsius)')
+ax[1].set_xlabel('months')
+
+# to prevent overlap in plots
+fig.tight_layout()
+
+# saving the figure
+fig.savefig('output/out.png')

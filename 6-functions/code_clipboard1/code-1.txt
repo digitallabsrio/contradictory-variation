@@ -1,0 +1,6 @@
+def add(num1, num2, num3, num4=4, num5=5):   # num4 and num5 are optional
+  return num1 + num2 + num3 + num4 + num5
+
+print(add(1, 2, 3))   # specifying values of num1, num2 and num3
+print(add(1, 2, 3, -4))   # specifying values of num1, num2, num3 and num4
+print(add(1, 2, 3, -4, -5))   # specifying values of num1, num2, num3, num4 and num5

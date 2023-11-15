@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# defining function with default paramters value
+def pendulum(t, A=1, f=100, p=0, d=0.05):
+  return (A * np.sin (2 * np.pi * f * t + p) * np.exp(-1 * d * t))
+
+# creating array for t
+t = np.linspace(0, 20 * np.pi, 40000)
+
+# creating x(t) and y(t) using the pendulum function
+x_t = pendulum(t, 2, 4, -1, 0.05) + pendulum(t, 1, 2, np.pi/2, 0.01) 
+y_t = pendulum(t, 4, 2, np.pi/4, 0.02) + pendulum(t, 1, 2, np.pi, 0.25)
+
+# plotting commands
+plt.figure(figsize=(12, 9), dpi=200)
+plt.plot(x_t, y_t, linewidth='0.25')
+
+# setting limits for plots
+plt.xlim(min(x_t)-0.5 , max(x_t)+0.5)
+plt.ylim(min(y_t)-0.5,  max(y_t)+0.5)
+
+# setting labels for plots
+plt.title('Harmonograph')
+plt.xlabel('x(t)')
+plt.ylabel('y(t)')
+
+# saving figure
+plt.savefig('output/harmonograph2.png')

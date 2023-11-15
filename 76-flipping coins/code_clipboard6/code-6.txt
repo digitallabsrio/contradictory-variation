@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+flips = rnd.randint(low=0, high=1+1, size=(2, 100)) # random array of dimensions 2 x 100
+tails = np.sum(flips, axis = 0)
+number_of_tails = np.zeros(3, dtype = 'int')
+for i in range(3):
+    number_of_tails[i] = np.count_nonzero(tails == i)
+
+# number_of_tails was computed two code cells back
+prob = number_of_tails / 100  
+# So cum_prob[0] = prob[0], cum_prob[1] = prob[0] + prob[1], etc.
+cum_prob = np.cumsum(prob) 
+print('cumulative probability ', cum_prob)
+
+plt.bar(range(0, 3), cum_prob)
+plt.xticks(range(0, 3))
+plt.xlabel('number of tails in two flips')
+plt.ylabel('cumulative probability');

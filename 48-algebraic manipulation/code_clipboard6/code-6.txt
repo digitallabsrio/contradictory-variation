@@ -1,0 +1,5 @@
+from sympy import *
+
+x = Symbol('x')
+a = 1/x + 1/x + 1/x**2
+print(together(a))

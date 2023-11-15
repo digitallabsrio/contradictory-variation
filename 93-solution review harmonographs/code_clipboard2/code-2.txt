@@ -1,0 +1,59 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+# defining function for pendulum
+def pendulum(t, A=1, f=1, p=0, d=0.05):
+  return (A * np.sin (2 * np.pi * f * t + p) * np.exp(-1 * d * t))
+ 
+# creating array for time
+t = np.linspace(0, 6 * np.pi, 40000)
+
+# generating random parameters for x pendulum
+nx = rnd.randint(1, 5)         # number of x pendulums
+f_x = rnd.randint(1, 40, nx)   # frequency
+A_x = rnd.randint(1, 5, nx)    # amplitude
+p_x = np.pi * rnd.random(nx)   # phase 
+d_x = 0.1 * rnd.random(nx)     # decay factor
+
+# generating random parameters for y pendulum
+ny = rnd.randint(1, 5)          # number of y pendulums
+f_y = rnd.randint(1, 40, ny)    # frequency
+A_y = rnd.randint(1, 5, ny)     # amplitude
+p_y = np.pi * rnd.random(ny)    # phase
+d_y = 0.1 * rnd.random(ny)     # decay factor
+
+# setting initial values for x pendulum and y pendulum
+x_t = 0
+y_t = 0
+
+# generating data for x pendulum
+for i in range(nx):
+  x_t = x_t + pendulum(t, A_x[i], f_x[i], p_x[i], d_x[i])
+
+# generating data for y pendulum
+for i in range(ny):
+  y_t = y_t + pendulum(t, A_y[i], f_y[i], p_y[i], d_y[i])
+
+plt.figure(figsize=(12, 9), dpi=100)
+slc = rnd.randint(1, 4)     # number of slicings
+
+# creating plots according to the number of slicings
+for i in range(slc):
+  col = rnd.random(3)
+  lower = int(len(t) / slc * i)           # lower limit for index slicing
+  upper = int(len(t) / slc * (i + 1))     # upper limit for index slicing
+
+  plt.plot(x_t[lower:upper], y_t[lower:upper], color=col, linewidth='0.25')
+
+# Adding labels
+plt.title('Harmonograph')
+plt.xlabel('x')
+plt.ylabel('y')
+
+# setting limits for plots
+plt.xlim(min(x_t)-0.5 , max(x_t)+0.5)
+plt.ylim(min(y_t)-0.5,  max(y_t)+0.5)
+
+# saving figure
+plt.savefig('output/harmonograph3.png')

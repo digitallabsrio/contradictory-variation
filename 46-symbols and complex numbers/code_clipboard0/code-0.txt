@@ -1,0 +1,6 @@
+from sympy import *
+
+x = Symbol('x')
+y, z = symbols('y z')
+
+print(x + y + z)

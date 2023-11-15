@@ -1,0 +1,4 @@
+import numpy as np
+
+current = np.array([2.2, 2.5, 2.5, 2.7, 2.1, 2.5, 2.6, 2.5, 3.0, 2.9, 2.3, 2.8])
+print("maximum value:", np.max(current))     # to calculate maximum value

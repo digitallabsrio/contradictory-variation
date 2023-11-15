@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+n = 2    # number of outcomes
+outcomes = np.zeros(n, dtype='int') # Two outcomes. heads are stored in outcome[0], tails in outcome[1]
+flips = rnd.randint(0, n, 100)
+
+for i in range (n):
+  outcomes[i] = len(flips[flips == i])    # stores the length of of each outcome in outcomes
+  print('outcome ', i, ' is ', outcomes[i])

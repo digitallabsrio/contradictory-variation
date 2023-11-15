@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import numpy.random as rnd
+
+rnd.seed(55)    # to make sure the output of rnd is consistent
+flips = rnd.randint(low=0, high=1+1, size=(2, 100)) # random array of dimensions 2 x 100
+tails = np.sum(flips, axis=0)
+number_of_tails = np.zeros(3, dtype='int')
+
+for i in range(3):
+  number_of_tails[i] = np.count_nonzero(tails == i)
+
+print('number of 0 tails:', number_of_tails[0])
+print('number of 1 tail:', number_of_tails[1])
+print('number of 2 tails:', number_of_tails[2])
